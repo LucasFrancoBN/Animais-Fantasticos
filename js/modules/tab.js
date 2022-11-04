@@ -1,4 +1,4 @@
-export default class initTabNav {
+export default class TabNav {
   constructor(menus, contents) {
     this.menus = document.querySelectorAll(menus);
     this.contents = document.querySelectorAll(contents);
