@@ -1,24 +1,41 @@
 export default class ScrollAnima {
   constructor(articles) {
     this.articles = document.querySelectorAll(articles);
-    this.alturaWindow = window.innerHeight * 0.5;
+    this.alturaWindow = window.innerHeight * 0.6;
 
-    this.animarScroll = this.animarScroll.bind(this);
+    this.checkDistance = this.checkDistance.bind(this);
   }
 
-  animarScroll() {
-    this.articles.forEach((article) => {
-      const topoArticle = article.getBoundingClientRect().top;
-      const verificadorAltura = topoArticle - this.alturaWindow < 0;
-      if (verificadorAltura) article.classList.add("animacao-scroll");
-      else if (article.classList.contains("animacao-scroll")) {
-        article.classList.remove("animacao-scroll");
+  getDistance() {
+    this.distance = [...this.articles].map((article) => {
+      const offset = article.offsetTop;
+      return {
+        element: article,
+        offset: Math.floor(offset - this.alturaWindow),
+      };
+    });
+  }
+
+  checkDistance() {
+    this.distance.forEach((item) => {
+      if (window.scrollY > item.offset) {
+        item.element.classList.add("animacao-scroll");
+      } else if (item.element.classList.contains("animacao-scroll")) {
+        item.element.classList.remove("animacao-scroll");
       }
     });
   }
 
   init() {
-    this.animarScroll();
-    window.addEventListener("scroll", this.animarScroll);
+    if (this.articles.length) {
+      this.getDistance();
+      this.checkDistance();
+      window.addEventListener("scroll", this.checkDistance);
+    }
+    return this;
+  }
+
+  stop() {
+    window.removeEventListener("scroll", this.checkDistance);
   }
 }
