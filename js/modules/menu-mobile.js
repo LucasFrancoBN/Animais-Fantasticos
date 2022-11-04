@@ -7,9 +7,13 @@ export default function initMenuMobile() {
   function openMenu() {
     menuList.classList.add("ativo");
     menuButton.classList.add("ativo");
+<<<<<<< HEAD
     console.log(menuButton, menuList);
     outsideClick(menuList, eventos, () => {
       console.log(menuButton, menuList);
+=======
+    outsideClick(menuList, eventos, () => {
+>>>>>>> 0962e3ea0ab15abdcd1edae78986d447fb06a8db
       menuList.classList.remove("ativo");
       menuButton.classList.remove("ativo");
     });

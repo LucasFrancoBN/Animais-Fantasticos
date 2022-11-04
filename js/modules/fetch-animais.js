@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import initAnimaNumeros from "./animaNumeros.js";
+=======
+import AnimaNumeros from "./animaNumeros.js";
+>>>>>>> 0962e3ea0ab15abdcd1edae78986d447fb06a8db
 
 export default function initFetchAnimais() {
   function createAnimal(animal) {
@@ -17,7 +21,16 @@ export default function initFetchAnimais() {
         const divAnimal = createAnimal(animal);
         numerosGrid.appendChild(divAnimal);
       });
+<<<<<<< HEAD
       initAnimaNumeros();
+=======
+      const animaNumeros = new AnimaNumeros(
+        "[data-numero]",
+        ".numeros",
+        "animacao-scroll"
+      );
+      animaNumeros.init();
+>>>>>>> 0962e3ea0ab15abdcd1edae78986d447fb06a8db
     } catch (error) {
       console.log(error);
     }

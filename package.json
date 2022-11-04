@@ -1,8 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "animais-eslint",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+=======
+  "name": "animais-fantasticos",
+  "version": "1.0.0",
+>>>>>>> 0962e3ea0ab15abdcd1edae78986d447fb06a8db
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
