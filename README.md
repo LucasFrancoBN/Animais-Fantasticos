@@ -33,7 +33,7 @@
     <h2> 📝 Sobre o Projeto </h2> 
     <p> Animais Fantásticos, um projeto que fala um pouco sobre algumas espécies de animais. O projeto foi feito totalmente a "mão" e utilizando somente JavaScript, sem nenhum framework. Nele, foi usado classes, fetch API entre diversas outras funcionalidades ES6+. </p>
  
- <h3 align="center">Link do Projeto <a href="https://lucasfrancobn.github.io/Bikecraft/">CLIQUE AQUI</a></h3>
+ <h3 align="center">Link do Projeto <a href="https://lucasfrancobn.github.io/Animais-Fantasticos/">CLIQUE AQUI</a></h3>
 
 </div>
 <br>
